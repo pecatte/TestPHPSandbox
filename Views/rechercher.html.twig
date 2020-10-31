@@ -1,0 +1,27 @@
+{% extends "index.html.twig" %}
+
+{% block section %}
+   <form id="recherche" method="post" class="well" action="index.php?action=valider_recher">
+   <fieldset class="form-group"> <legend>Saisie des critères de recherche de produits</legend>
+        <div class="form-group row">
+            <label for="libelle" class="col-sm-2 col-form-label col-form-label-sm">Libellé </label>
+            <div class="col-sm-10">
+                <input type="text" id="libelle" name="libelle" class="form-control form-control-sm" placeholder="tout ou partie du nom du produit"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="prixmin" class="col-sm-2 col-form-label col-form-label-sm">Prix minimum </label>
+            <div class="col-sm-10">
+                <input type="number" id="prixmin" name="prixmin"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="prixmax" class="col-sm-2 col-form-label col-form-label-sm">Prix maximum </label>
+            <div class="col-sm-10">
+                <input type="number" id="prixmax" name="prixmax"/>
+            </div>
+        </div>
+    <input type="submit" name="valider_recher" value="valider"/>
+   </fieldset>
+   </form>
+{% endblock %}
